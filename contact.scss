@@ -1,56 +1,33 @@
-@use "colortext"; 
-
-$primary-color: rgb(6, 160, 6);
-$secondary-color: black;
-$background-color: white;
-$primary-text: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
-
-* {
-    margin: 0%;
-    font-family: $primary-text;
-    background-color: $background-color;
-}
-
-/* Styling the links inside the navigation bar */
-.topnav {
-    width: 100%;
-    overflow: auto;
-}
+@use "colortext";
+@use "text";
 
 .topnav a {
+    background-color: colortext.$background-color;
     overflow: hidden;
     float: left;
     display: block;
     text-align: centre;
     font-size: 18px;
-    font-family: $primary-text;
+    font-family: colortext.$primary-text;
     text-decoration: none;
     width: 25%;
     margin: 0%;
-    color: $secondary-color;
-}
+    color: colortext.$secondary-color;
 
-/* Change the colour of links on hover */
-.topnav a:hover {
-    color: $background-color;
-    background-color: $primary-color;
-}
+    &:hover {
+        background-color: colortext.$primary-color;
+        color: colortext.$background-color;
+    }
 
-/* Add a colour to the active/current link */
-.topnav a.active {
-    background-color: lightblue;
-    color: $background-color;
+    &--:hover.icon {
+        display: none;
+    }
 }
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
-}
-
-h1 {
-    font-size: 40px;
+body {
+    font-family: colortext.$primary-text;
 }
 
 h2 {
-    color: $primary-color;
+    color: colortext.$primary-color;
+    font-size: colortext.$h2;
 }

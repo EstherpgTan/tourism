@@ -1,9 +1,5 @@
-@use "colortext"; 
-
-$primary-color: rgb(6, 160, 6);
-$secondary-color: black;
-$background-color: white;
-$primary-text: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
+@use "colortext";
+@use "text";
 
 /* Styling the links inside the navigation bar */
 .topnav {
@@ -13,36 +9,29 @@ $primary-text: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
 }
 
 .topnav a {
-    background-color: $background-color;
+    background-color: colortext.$background-color;
     overflow: hidden;
     float: left;
     display: block;
     text-align: centre;
     font-size: 18px;
-    font-family: $primary-text;
+    font-family: colortext.$primary-text;
     text-decoration: none;
     width: 25%;
     margin-top: 0px;
-    color: $secondary-color;
-}
+    color: colortext.$secondary-color;
 
-/* Change the colour of links on hover */
-.topnav a:hover {
-    color: $background-color;
-    background-color: $primary-color;
-}
+    /* Change the colour of links on hover */
+    &:hover {
+        color: colortext.$background-color;
+        background-color: colortext.$primary-color;
+    }
 
-/* Add a colour to the active/current link */
-.topnav a.active {
-    background-color: lightblue;
-    color: $background-color;
+    /* Hide the link that should open and close the topnav on small screens */
+    &--.icon {
+        display: none;
+    }
 }
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
-}
-
 * {
     box-sizing: border-box;
     margin-top: 0px;
@@ -135,46 +124,18 @@ img {
 }
 
 h1 {
-    font-family: $primary-text;
+    font-family: colortext.$primary-text;
     font-size: 50px;
 }
 
 strong {
-    color: $primary-color;
+    color: colortext.$primary-color;
 }
 
 h2 {
-    font-family: $primary-text;
+    font-family: colortext.$primary-text;
 }
 
 h3 {
-    font-family: $primary-text;
-}
-
-/* Mobile devices, 320-480px, decrease text size */
-@media only screen and (max-width: 480px) {
-    .text {
-        font-size: 11px;
-    }
-}
-
-//* iPads, tablets, 481-768px
-@media only screen and (min-width: (481px)) and (max-width: 768px) {
-    .text {
-        font-size: 12px;
-    }
-
-    //* Laptops, 769-1024px
-    @media only screen and (min-width: (769px)) and (max-width: 1024px) {
-        .text {
-            font-size: 12px;
-        }
-
-        //* Desktops, 1025-1200px
-        @media only screen and (min-width: (1025x)) and (max-width: 1200px) {
-            .text {
-                font-size: 12px;
-            }
-        }
-    }
+    font-family: colortext.$primary-text;
 }

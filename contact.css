@@ -1,51 +1,31 @@
-* {
-  margin: 0%;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-  background-color: white;
-}
-
-/* Styling the links inside the navigation bar */
-.topnav {
-  width: 100%;
-  overflow: auto;
-}
-
 .topnav a {
+  background-color: white;
   overflow: hidden;
   float: left;
   display: block;
   text-align: centre;
   font-size: 18px;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
   text-decoration: none;
   width: 25%;
   margin: 0%;
   color: black;
 }
-
-/* Change the colour of links on hover */
 .topnav a:hover {
-  color: white;
   background-color: rgb(6, 160, 6);
-}
-
-/* Add a colour to the active/current link */
-.topnav a.active {
-  background-color: lightblue;
   color: white;
 }
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
+.topnav a--:hover.icon {
   display: none;
 }
 
-h1 {
-  font-size: 40px;
+body {
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial;
 }
 
 h2 {
   color: rgb(6, 160, 6);
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=contact.css.map */
